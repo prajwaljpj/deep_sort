@@ -184,10 +184,11 @@ def generate_detections(encoder, mot_dir, output_dir, detection_dir=None):
 def parse_args():
     """Parse command line arguments.
     """
+    # TODO currently hardcoded, pass from python/deepsort 
     parser = argparse.ArgumentParser(description="Re-ID feature extractor")
     parser.add_argument(
         "--model",
-        default="resources/networks/mars-small128.pb",
+        default="/home/rbccps2080ti/projects/VisTraSAS/models/mars-small128.pb",
         help="Path to freezed inference graph protobuf.")
     parser.add_argument(
         "--mot_dir", help="Path to MOTChallenge directory (train or test)",
